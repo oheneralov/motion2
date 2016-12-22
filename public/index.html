@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+    <!--
+      Notice the use of %PUBLIC_URL% in the tag above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>React App</title>
+  </head>
+  <body>
+    <script src="../build/bootstrap.min.js"></script>
+<div class="container">
+		<h2>Simulator of robot parrot movement</h2>
+	</div>
+<div id = "tabs">
+  <ul>
+    <li><a href="#tab-2d">2d simulation</a></li>
+	<li><a href="#tab-3d">3d simulation</a></li>
+  </ul>
+    <div id="tab-2d">
+    <p>Two dimensional simulation. Used for testing simple actions</p>
+	<div id="map"></div>
+	<div id="2dsimulation" style = "position : absolute; top: 100px;"></div>
+  </div>
+  <div id="tab-3d">
+    <p>Three dimensional simulation. Used to test a robot in general</p>
+	<div id="3dsimulation"></div>
+  </div>
+	<script type="text/jsx" src="input.js"></script>
+	</div>
+	<footer>
+		Copyright &copy; 2016 by Oleksandr Generalov. All Rights Reserved.
+	</footer>
+	
+	<script>
+    function initMap() {
+        var uluru = {lat: 49.8397, lng: 24.0297};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 20,
+          center: uluru,
+		  mapTypeId: 'satellite'
+        });
+      }
+  </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjBFyQeB2jN6BpbMr7plXIxTupe__yiog1&callback=initMap">
+    </script>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start`.
+      To create a production bundle, use `npm run build`.
+    -->
+  </body>
+</html>

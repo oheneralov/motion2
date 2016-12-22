@@ -1,0 +1,9 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+import Parrot from './Parrot.js';
+import Parrot3d from './Parrot3d.js';
+import Parser from './Parser.js';
+import './index.css';
+
+ReactDOM.render(<Parser type = "parrot2d"/>, document.getElementById('2dsimulation'));
+ReactDOM.render(<Parser type = "parrot3d"/>, document.getElementById('3dsimulation'));
